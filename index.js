@@ -8,15 +8,12 @@ const readlineSync = require('readline-sync')
 let globalStore = {}
 
 
-
 /*
 * SOLUTION CODE FOR BCRYPT FUNCTIONS
 */
 
 // function for checking a password
 checkPassword = async (username, plaintextPassword) => {
-    // TODO: Make sure to delete this console.log once you're done implementing the function!
-    console.log('\n Uh-oh, checkPassword is not yet implemented. 😢')
     // Ensure global store contains the user 
     // (this is a quick way to check if an object contains a key)
     if (globalStore[username]) {
@@ -41,9 +38,7 @@ checkPassword = async (username, plaintextPassword) => {
 }
 
 hashPassword = async (username, password) => {
-    // TODO: Make sure to delete this console.log once you're done implementing the function!
-    console.log('\nUh-oh, hashPassword is not yet implemented. 😢')
-
+    
     // TODO: Make the password hash using bcrypt
     let hashedPassword = await bcrypt.hash(password, 12)
 
@@ -53,11 +48,6 @@ hashPassword = async (username, password) => {
     // TODO: Print a status update including the username and password hash
     console.log(`✅ User '${username}' was added. Their password hash is ${hashedPassword}\n`)
 }
-
-
-
-
-
 /* 
 * CODE BELOW IS PROVIDED AND DOESN'T NEED TO BE ALTERED 
 */
